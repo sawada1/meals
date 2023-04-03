@@ -1,6 +1,6 @@
 <template>
     <div class="container themeal ">
-        <h1>{{ theMeal.strMeal }}</h1>
+        <h2>{{ theMeal.strMeal }}</h2>
         <img class="container" :src="theMeal.strMealThumb" alt="">
         <div class="container cate">
         <h5>category: <span>{{ theMeal.strCategory }}</span></h5>
@@ -46,7 +46,8 @@ export default {
         // align-items: center;
         // gap: 50px;
         width: 100%;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
         padding: 30px;
     }
     p{

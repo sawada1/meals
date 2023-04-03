@@ -2,7 +2,7 @@
     <div class="container">
 <h2>search meal by name</h2> 
 <div class="theInput">
-    <input type="text" v-model="searchName" placeholder="search for meals">
+    <input @keypress.enter="searchByName" type="text" v-model="searchName" placeholder="search for meals">
 <button @click="searchByName" class="btn btn-warning">search</button>
 <hr>
 </div>  
@@ -14,9 +14,12 @@
     <router-link :to="{name:'theMealbyid' , params:{id:theM.idMeal}}">
         <img :src="theM.strMealThumb" alt="">    
     </router-link>
-      <h5>{{ theM.strMeal }}</h5>
+    <div class="text">
+    <h5>{{ theM.strMeal }}</h5>
       <p>{{ theM.strInstructions.substring(0,100) }}.....</p>
       <a :href="theM.strYoutube"  class="btn btn-warning" target="_blank">youtube</a>
+    </div>
+      
  </div>
  </div>
 </div>

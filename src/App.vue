@@ -30,7 +30,7 @@ export default {
   --main-shadow: 10px 10px 10px rgba(0, 0, 0, 0.468);
 }
 body{
-  background-color: #ccc;
+ 
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

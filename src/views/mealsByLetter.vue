@@ -35,9 +35,12 @@
     <router-link :to="{name:'theMealbyid' , params:{id:theM.idMeal}}">
         <img :src="theM.strMealThumb" alt="">    
     </router-link>
-      <h5>{{ theM.strMeal }}</h5>
+    <div class="text">
+    <h5>{{ theM.strMeal }}</h5>
       <p>{{ theM.strInstructions.substring(0,100) }}.....</p>
       <a :href="theM.strYoutube"  class="btn btn-warning" target="_blank">youtube</a>
+    </div>
+      
  </div>
  </div>
 </template>

@@ -7,9 +7,12 @@
      <router-link :to="{name:'theMealbyid' , params:{id: meal.meals[0].idMeal}}">
       <img :src="meal.meals[0].strMealThumb" alt="">     
      </router-link>
+     <div class="text">
       <h5>{{ meal.meals[0].strMeal }}</h5>
       <p>{{ meal.meals[0].strInstructions.substring(0,100)}}....</p>
-      <a :href="meal.meals[0].strYoutube"  class="btn btn-warning" target="_blank">youtube</a>
+      <a :href="meal.meals[0].strYoutube"  class="btn btn-warning" target="_blank">youtube</a>     
+     </div>
+
      </div>
     </div>
     <span class="error" >{{ errorMessage }}</span>
@@ -65,6 +68,9 @@ export default {
 
 
 <style lang="scss">
+h2{
+  font-weight: bolder;
+}
 body{
   overflow-x: hidden;
 }
@@ -79,19 +85,24 @@ body{
       background-color: #fff;
       margin: 20px;
       cursor: pointer;
-      padding: 20px;
+   
       border-radius: 20px;
       display: flex;
       align-items: center;
       flex-direction: column;
       gap: 10px;
-      box-shadow: var(--main-shadow);
+      box-shadow: 5px 0px 10px 5px rgba(0, 0, 0, 0.35);
       &:hover{
         transform: translateY(-20px);
       }
       img{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         width: 100%;
         object-fit: contain;
+      }
+      .text{
+        padding: 20px;
       }
     }
   }
